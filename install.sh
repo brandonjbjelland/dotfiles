@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
+set +x
 
 # install zsh and plugins
-./zsh/mcfly_install.sh --git
+sudo ./zsh/mcfly_install.sh --git cantino/mcfly
 mv zsh/.zshrc $HOME/
 
 # install krypton
-./krypton/install.sh
+sudo ./krypton/install.sh

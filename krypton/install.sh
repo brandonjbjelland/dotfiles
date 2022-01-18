@@ -194,14 +194,14 @@ install_debian() {
   which kr && say Removing old version of kr...
   ignore sudo apt-get remove kr -y &>/dev/null
   say Adding KryptCo repository...
-  ignore sudo add-apt-repository --remove "deb http://kryptco.github.io/deb beta beta" &>/dev/null
+  ignore sudo add-apt-repository -y -remove "deb http://kryptco.github.io/deb beta beta" &>/dev/null
   sleep 1
   is_kali
   if [ "$KALI" = 'yes' ]; then
     # Kali linux add-apt-repository checks for kali-rolling template
     grep "deb http://kryptco.github.io/deb kryptco main" "/etc/apt/sources.list" || ensure sudo printf "deb http://kryptco.github.io/deb kryptco main" >>/etc/apt/sources.list
   else
-    ensure sudo add-apt-repository "deb http://kryptco.github.io/deb kryptco main"
+    ensure sudo add-apt-repository "deb http://kryptco.github.io/deb kryptco main" -y
   fi
   sleep 1
   ignore sudo apt-get update
