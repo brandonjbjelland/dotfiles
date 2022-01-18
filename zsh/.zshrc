@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/brandonjacob/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -120,7 +120,6 @@ alias gcurl='curl --header "Authorization: Bearer $(gcloud config config-helper 
 alias cd_git='cd ~/Development/git/'
 alias q='exit'
 alias vi_zshrc='code ~/.zshrc'
-alias cd_oh_my_zsh='cd ~/.oh-my-zsh'
 
 # fpath=$(/usr/local/share/zsh-completions $fpath)
 
@@ -135,24 +134,17 @@ export PATH=${PATH}:/Applications/Postgres.app/Contents/Versions/latest/bin
 export PATH=${PATH}:/Library/Frameworks/Python.framework/Versions/3.9/bin
 export PATH=${PATH}:${HOME}/Development/flutter/bin
 
-# alias python3='/Library/Frameworks/Python.framework/Versions/3.9/bin/python3'
 alias build='nocorrect build '
 alias diff='diff -u'
 # unsetopt correct_all
 alias gbrew="sudo chown -R $(whoami) /usr/local/bin /usr/local/etc /usr/local/sbin /usr/local/share /usr/local/share/doc && brew "
-
 alias flush_dns='sudo killall -HUP mDNSResponder ; sudo killall mDNSResponderHelper ; sudo dscacheutil -flushcache'
-
-# TODO: how to lazy load these?
-# alias k_grafana_proxy="kubectl -n istio-system port-forward $(kubectl -n istio-system get pod -l app=grafana -o jsonpath='{.items[0].metadata.name}') 3000:3000 & ; open localhost:3000 &"
-# alias k_kiali_proxy="kubectl -n istio-system port-forward $(kubectl -n istio-system get pod -l app=kiali -o jsonpath='{.items[0].metadata.name}') 20001:20001 & ; open localhost:20001 &"
 
 alias k_ubuntu="k run -i --tty ubunt1 --image=ubuntu -- sh"
 
 # Added by Krypton
 export GPG_TTY=$(tty)
 
-# source /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/scripts/shell/funky.sh
 eval "$(mcfly init zsh)"
 
 # Generated for envman. Do not edit.
