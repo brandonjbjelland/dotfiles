@@ -141,6 +141,7 @@ alias gbrew="sudo chown -R $(whoami) /usr/local/bin /usr/local/etc /usr/local/sb
 alias flush_dns='sudo killall -HUP mDNSResponder ; sudo killall mDNSResponderHelper ; sudo dscacheutil -flushcache'
 
 alias k_ubuntu="k run -i --tty ubunt1 --image=ubuntu -- sh"
+alias KR_PAIR="sed -i 's/\/usr\/local\/bin\/krgpg/\/usr\/bin\/krgpg/g' ${HOME}/.gitconfig && kr pair"
 
 # Added by Krypton
 export GPG_TTY=$(tty)
