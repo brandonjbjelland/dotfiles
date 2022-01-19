@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="~/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -77,7 +77,7 @@ plugins=(
   zsh-autosuggestions
 )
 
-source $ZSH/oh-my-zsh.sh
+source "${ZSH}/oh-my-zsh.sh"
 
 # User configuration
 
@@ -102,8 +102,8 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias zshconfig="mate ${HOME}/.zshrc"
+# alias ohmyzsh="mate ${HOME}/.oh-my-zsh"
 
 # Add Visual Studio Code (code)
 export GOPATH="${HOME}/go/"
@@ -117,9 +117,9 @@ alias cddddd='cd ../../../..'
 alias cdddddd='cd ../../../../..'
 alias gcurl='curl --header "Authorization: Bearer $(gcloud config config-helper --format=value\(credential.id_token\))"'
 
-alias cd_git='cd ~/Development/git/'
+alias cd_git="cd ${HOME}/Development/git/"
 alias q='exit'
-alias vi_zshrc='code ~/.zshrc'
+alias vi_zshrc="code ${HOME}/.zshrc"
 
 # fpath=$(/usr/local/share/zsh-completions $fpath)
 
@@ -129,7 +129,7 @@ if [ -f '/Users/brandonjacob/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/br
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/brandonjacob/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/brandonjacob/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH=/usr/local/opt/mysql-client/bin:$PATH
-export PATH=$PATH:~/.porter
+export PATH=$PATH:${HOME}/.porter
 export PATH=${PATH}:/Applications/Postgres.app/Contents/Versions/latest/bin
 export PATH=${PATH}:/Library/Frameworks/Python.framework/Versions/3.9/bin
 export PATH=${PATH}:${HOME}/Development/flutter/bin

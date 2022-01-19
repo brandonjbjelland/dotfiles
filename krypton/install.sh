@@ -115,8 +115,8 @@ install_darwin_manual() {
     ensure mv_maybe_sudo "/tmp/kr/$VERSION/Frameworks/krbtle.framework" $PREFIX/Frameworks/
   fi
 
-  ensure mkdir -p ~/.ssh
-  ensure touch ~/.ssh/config
+  ensure mkdir -p ${HOME}/.ssh
+  ensure touch ${HOME}/.ssh/config
 
   say Krypton installed successfully. Type \"kr pair\" to pair with the Krypton mobile app.
   kr restart &>/dev/null
