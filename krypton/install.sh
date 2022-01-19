@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set +x
+
 VERSION=2.4.13
 
 install_darwin() {

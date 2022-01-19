@@ -1,5 +1,6 @@
 #!/bin/sh
 
+set +x
 # from: https://raw.githubusercontent.com/cantino/mcfly/master/ci/install.sh
 # Heavily modified from https://github.com/japaric/trust/blob/gh-pages/install.sh.
 

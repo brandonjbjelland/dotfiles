@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+set +x
 # zsh autosuggestions: https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
 git clone https://github.com/zsh-users/zsh-autosuggestions ${HOME}/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
