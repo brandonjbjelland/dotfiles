@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 set +x
 
-# install zsh and plugins
 BASEDIR=$(dirname "$0")
 
-sudo "${BASEDIR}/zsh/mcfly_install.sh" --git cantino/mcfly
+# install zsh and plugins
+sudo ${BASEDIR}/zsh/mcfly_install.sh --git cantino/mcfly
+${BASEDIR}/zsh/plugin_install.sh
 mv "${BASEDIR}/zsh/.zshrc" "${HOME}/"
 
 # install krypton
-sudo "${BASEDIR}/krypton/install.sh"
+${BASEDIR}/krypton/install.sh
