@@ -2,10 +2,11 @@
 
 set +x
 
-sudo echo "en_US.UTF-8 UTF-8" >/etc/locale.gen && /usr/sbin/locale-gen
+echo 'en_US.UTF-8 UTF-8' | sudo tee /etc/locale.gen
+sudo /usr/sbin/locale-gen
 
 # Set the default shell to zsh rather than sh
-export SHELL /usr/bin/zsh
+export SHELL $(which zsh)
 export TERM xterm
 
 # run the installation script
