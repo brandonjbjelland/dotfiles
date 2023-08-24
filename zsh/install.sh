@@ -21,4 +21,4 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${HOME}/.oh-m
 # Mcfly install
 sudo ${BASEDIR}/zsh/mcfly_install.sh --git cantino/mcfly
 
-mv "${BASEDIR}/zsh/.zshrc" "${HOME}/"
+cp ${BASEDIR}/zsh/.zshrc ${HOME}/
